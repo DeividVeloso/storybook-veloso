@@ -1,8 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { titleStyle, subtitleStyle, headerStyle, containerStyle, videoStyle } from './Styles'
 
-const FullHeader = ({ title, subtitle, bgColor, textColor, font, bgImage }) => {
-    const headerStyles = {
+const FullHeader = ({ title, subtitle, bgColor, textColor, font, bgImage, video }) => {
+    const headerStylesCombined = {
+        ...headerStyle,
         backgroundColor: bgColor,
         color: textColor,
         fontFamily: font,
@@ -10,9 +12,12 @@ const FullHeader = ({ title, subtitle, bgColor, textColor, font, bgImage }) => {
     };
 
     const component = (
-        <header style={headerStyles}>
-            {title && <h1>{title}</h1>}
-            {subtitle && <h2>{subtitle}</h2>}
+        <header style={headerStylesCombined}>
+            <div style={containerStyle}>
+                {title && <h1 style={titleStyle}>{title}</h1>}
+                {subtitle && <h2 style={subtitleStyle}>{subtitle}</h2>}
+            </div>
+            {video && <video style={videoStyle} src={video} autoPlay muted loop></video>}
         </header>
     );
     return component;
@@ -23,7 +28,8 @@ const propTypes = {
     subtitle: PropTypes.string,
     bgColor: PropTypes.string,
     textColor: PropTypes.string,
-    bgImage: PropTypes.string
+    bgImage: PropTypes.string,
+    video: PropTypes.string
 };
 
 const defaultProps = {

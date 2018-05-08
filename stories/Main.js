@@ -42,6 +42,6 @@ storiesOf('React Full Header', module)
         <FullHeader
             title="TDD"
             subtitle="Curso de JS com TDD na prática"
-            video=""
+            video="My_video.mp4"
         />
     ));

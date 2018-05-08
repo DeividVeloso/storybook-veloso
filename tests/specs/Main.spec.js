@@ -70,4 +70,18 @@ describe('FullHeader Hello', () => {
             expect(wrapper).to.have.style('background-image').equal('url(bg.jpg)');
         });
     })
+    context('title', () => {
+        it('should return video tag when pass video', () => {
+            const wrapper = shallow(<FullHeader title="TDD" video="1" />);
+            expect(wrapper.find('video')).to.have.length(1);
+        });
+        it('should not return video tag when not pass video', () => {
+            const wrapper = shallow(<FullHeader />);
+            expect(wrapper.find('video')).to.have.length(0);
+        }); 
+        it('should have video tag with the video passed', () => {
+            const wrapper = shallow(<FullHeader title="TDD" video="my_video.mp4"/>);
+            expect(wrapper.find('video').props().src).to.be.equal("my_video.mp4");
+        });
+    })
 });
