@@ -1,6 +1,6 @@
 {
-  "name": "react-full-header",
-  "version": "1.1.2",
+  "name": "story-book-veloso",
+  "version": "1.0.0",
   "description": "A full header component create with react",
   "main": "dist/Main.js",
   "scripts": {
@@ -28,19 +28,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/lyef/lyef-react-component.git"
+    "url": ""
   },
   "keywords": [
     "react",
     "component",
     "base"
   ],
-  "author": "lyef (http://lyef.github.io/)",
+  "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/lyef/lyef-react-component/issues"
+    "url": ""
   },
-  "homepage": "https://github.com/lyef/lyef-react-component#README",
+  "homepage": "",
   "devDependencies": {
     "@personare/react-storybook-decorator-github-corner": "^0.1.4",
     "@storybook/react": "^3.1.5",
